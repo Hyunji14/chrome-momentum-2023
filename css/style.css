@@ -1,3 +1,17 @@
+@import "reset.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@600;700;800&family=Open+Sans:wght@600;800");
+
+@import "background.css";
+@import "login.css";
+@import "greeting.css";
+
+body {
+  font-family: "Inter", sans-serif;
+  color: white;
+  height: 100vh;
+}
+
 .hidden {
   display: none;
 }
