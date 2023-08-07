@@ -4,9 +4,10 @@
 
 @import "background.css";
 @import "login.css";
-@import "greeting.css";
+@import "main.css";
 
 body {
+  box-sizing: border-box;
   font-family: "Inter", sans-serif;
   color: white;
   height: 100vh;
