@@ -16,13 +16,26 @@ function onLoginSubmit(event) {
 }
 
 function paintGreetings(username) {
+  const date = new Date();
+  const hours = date.getHours();
+  let greetingLetter = "Hello";
+
   const clockDiv = document.querySelector("#clock");
   const todoForm = document.querySelector("#todo-form");
   const toDoList = document.querySelector("#todo-list");
   const quote = document.querySelector("#quote");
   const weather = document.querySelector("#weather");
 
-  greeting.innerText = `Hello ${username}`;
+  if (hours < 12) {
+    greetingLetter = "Good Morning";
+  } else if (12 <= hours && hours < 18) {
+    greetingLetter = "Good Afternoon";
+  } else {
+    greetingLetter = "Good Evening";
+  }
+
+  greeting.innerText = `${greetingLetter}, ${username}.`;
+
   greeting.classList.remove(HIDDEN_CLASSNAME);
   clockDiv.classList.remove(HIDDEN_CLASSNAME);
   todoForm.classList.remove(HIDDEN_CLASSNAME);

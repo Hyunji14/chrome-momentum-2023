@@ -1,4 +1,5 @@
-const clock = document.querySelector("h2#clock");
+const mainDiv = document.querySelector(".main-div");
+const clock = document.querySelector(".main-div h2#clock");
 
 function getClock() {
   const date = new Date();
@@ -11,3 +12,10 @@ function getClock() {
 
 getClock();
 setInterval(getClock, 1000);
+
+const userCheck = localStorage.getItem("username");
+const HIDDEN_CLASS = "hidden";
+
+if (userCheck !== null) {
+  mainDiv.classList.remove(HIDDEN_CLASS);
+}

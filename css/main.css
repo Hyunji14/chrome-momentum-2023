@@ -1,9 +1,21 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .header-div {
+  position: absolute;
+  top: 10px;
+  right: 3px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  margin: 15px;
+  margin: 10px;
 }
 
 .header-div span {
@@ -21,4 +33,54 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.main-div h2,
+.main-div h1 {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#clock {
+  font-size: 90px;
+  font-weight: 400;
+}
+
+#greeting {
+  font-size: 35px;
+}
+
+#todo-form {
+  margin: 30px 0 10px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#todo-form input {
+  border: none;
+  border-bottom: 1px solid white;
+  text-align: center;
+  font-size: 25px;
+  background-color: transparent;
+  color: white;
+}
+
+.bottom-div {
+  position: absolute;
+  bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.bottom-div span {
+  margin-bottom: 5px;
+  font-size: 1;
+  opacity: 0.9;
 }

@@ -44,9 +44,13 @@ function handleToDoSubmit(event) {
     id: Date.now(),
   };
 
-  toDos.push(newToDoObj);
-  paintToDo(newToDoObj);
-  saveToDos();
+  if (toDos.length < 3) {
+    toDos.push(newToDoObj);
+    paintToDo(newToDoObj);
+    saveToDos();
+  } else {
+    alert("It can be Up to Three. :D");
+  }
 }
 
 todoForm.addEventListener("submit", handleToDoSubmit);
