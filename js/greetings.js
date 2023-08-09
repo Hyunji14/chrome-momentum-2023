@@ -16,15 +16,16 @@ function onLoginSubmit(event) {
 }
 
 function paintGreetings(username) {
-  const date = new Date();
-  const hours = date.getHours();
-  let greetingLetter = "Hello";
-
+  const mainDiv = document.querySelector(".main-div");
+  const headerDiv = document.querySelector(".header-div");
   const clockDiv = document.querySelector("#clock");
   const todoForm = document.querySelector("#todo-form");
   const toDoList = document.querySelector("#todo-list");
   const quote = document.querySelector("#quote");
-  const weather = document.querySelector("#weather");
+
+  const date = new Date();
+  const hours = date.getHours();
+  let greetingLetter = "Hello";
 
   if (hours < 12) {
     greetingLetter = "Good Morning";
@@ -36,13 +37,21 @@ function paintGreetings(username) {
 
   greeting.innerText = `${greetingLetter}, ${username}.`;
 
-  greeting.classList.remove(HIDDEN_CLASSNAME);
+  mainDiv.classList.remove(HIDDEN_CLASSNAME);
+  headerDiv.classList.remove(HIDDEN_CLASSNAME);
   clockDiv.classList.remove(HIDDEN_CLASSNAME);
+  greeting.classList.remove(HIDDEN_CLASSNAME);
   todoForm.classList.remove(HIDDEN_CLASSNAME);
   toDoList.classList.remove(HIDDEN_CLASSNAME);
   quote.classList.remove(HIDDEN_CLASSNAME);
-  weather.classList.remove(HIDDEN_CLASSNAME);
 }
+
+function logOutSubmit() {
+  localStorage.clear();
+}
+
+const logoutBtn = document.querySelector("#logout form > button");
+logoutBtn.addEventListener("submit", logOutSubmit);
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 

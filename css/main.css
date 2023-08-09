@@ -7,7 +7,7 @@
   }
 }
 
-.header-div {
+.header-div #weather {
   position: absolute;
   top: 10px;
   right: 3px;
@@ -18,14 +18,36 @@
   margin: 10px;
 }
 
-.header-div span {
+.header-div #weather span {
   margin-right: 10px;
 }
 
 #weather img {
+  margin-right: 5px;
   filter: brightness(0) invert(1);
   width: 30px;
   height: 30px;
+}
+
+#logout {
+  position: absolute;
+  top: 10px;
+  left: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+#logout button {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  color: white;
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .main-div {
@@ -83,4 +105,26 @@
   margin-bottom: 5px;
   font-size: 1;
   opacity: 0.9;
+}
+
+.todoList-div {
+  margin: 20px;
+}
+
+.todoList-div ul li {
+  margin-bottom: 10px;
+}
+
+.todoList-div ul li > span {
+  margin: 0 5px 0 5px;
+}
+
+input[type="checkbox"] {
+  border: 3px solid white;
+  opacity: 0.6;
+}
+
+.todoList-div ul li > button {
+  border: none;
+  background-color: transparent;
 }
